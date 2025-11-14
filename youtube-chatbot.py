@@ -60,7 +60,7 @@ def someFunc(video_id):
 
     splitter = RecursiveCharacterTextSplitter(chunk_size=1000,chunk_overlap=200)
     chunks=splitter.create_documents([transcript])
-    # print(len(chunks))
+    
 
 
     # Step 1c and 1d - Indexing ( Embedding generation and storing in vector store)
@@ -215,4 +215,5 @@ if st.session_state.confirmed and st.session_state.final_chain:
 #             message_placeholder.markdown(full_response)
     
 #     # Add assistant response to session state
+
 #     st.session_state.messages.append({"role": "assistant", "content": full_response})
